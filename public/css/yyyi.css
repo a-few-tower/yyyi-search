@@ -1,0 +1,651 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', 'sans-serif';
+    font-size: 1.4rem;
+    background: linear-gradient(#fffffc, #fce5e7) fixed;
+    color: #3f312b;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+div.wrapper {
+    margin: 32px 0 32px;
+}
+header {
+    margin: 12px 6px;
+}
+footer {
+    margin: 12px 6px;
+    padding-top: 12px;
+    border-top: solid 1px #3f312b;
+    line-height: 1.4;
+}
+h1 {
+    font-size: x-large;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+/* よく使うフォント */
+.white {
+    color: #fffffc;
+    text-shadow: /* 文字の縁取り */
+        #000  1px 1px 1px, #000 -1px -1px 1px, /* 右下、左上 */
+        #000 -1px 1px 1px, #000  1px -1px 1px, /* 左下、右上 */
+        #000  0   1px 1px, #000  0   -1px 1px, /* 下、上 */
+        #000 -1px 0   1px, #000  1px  0   1px; /* 左、右 */
+}
+.white-bold {
+    color: #fffffc;
+    font-weight: bold;
+    text-shadow: /* 文字の縁取り */
+        #000  1px 1px 1px, #000 -1px -1px 1px, /* 右下、左上 */
+        #000 -1px 1px 1px, #000  1px -1px 1px, /* 左下、右上 */
+        #000  0   1px 1px, #000  0   -1px 1px, /* 下、上 */
+        #000 -1px 0   1px, #000  1px  0   1px; /* 左、右 */
+}
+.small {
+    font-size: .8rem;
+}
+/**
+ * 検索結果
+ */
+ #yyyi-search-result {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 0;
+    background: #064221; /* 黒板色 */
+    border-top: 12px #d6d5d5 solid;  /* 黒板枠 */
+    border-bottom: 12px #d6d5d5 solid;  /* 黒板枠 */
+    box-shadow: 0 0 8px #000;
+}
+#yyyi-search-result .header .title {
+    text-align: center;
+    color: #ececec;  /* チョーク色 */
+    font-size: 5.5rem;
+    letter-spacing: 20px;
+    position: relative;
+    top: -5rem;
+}
+#yyyi-search-result .header table {
+    width: 100%;
+    border: none;
+}
+#yyyi-search-result .header table th {
+    height: 5rem;
+    border: 5px solid #bba802;
+}
+#yyyi-search-result .header table td {
+    height: 3.5rem;
+    border: 5px solid #bba802;
+}
+#yyyi-search-result .header table th:first-child,
+#yyyi-search-result .header table td:first-child {
+    border-left: none;
+}
+#yyyi-search-result .header table th:last-child,
+#yyyi-search-result .header table td:last-child {
+    border-right: none;
+}
+#yyyi-search-result-content {
+    margin-top: -6rem;
+    padding: 12px 6px;
+}
+#yyyi-search-result .info {
+    text-align: right;
+    font-size: 1em;
+    color: #ececec;  /* チョーク色 */
+    margin-bottom: 1rem;
+}
+#yyyi-search-result .info .count {
+    font-size: 1.5em;
+    padding: 0 6px;
+}
+#yyyi-search-result .notfound {
+    visibility: visible;
+    color: #ececec;  /* チョーク色 */
+    font-size: 1.6em;
+    padding: 96px 12px 120px;
+    text-align: center;
+}
+#yyyi-search-result .found {
+    visibility: hidden;
+    padding: 12px 0;
+}
+#yyyi-search-result .rakugaki {
+    color: #ececec;  /* チョーク色 */
+    padding: 0 6px;
+    line-height: 1.4;
+    letter-spacing: .2em;
+}
+#yyyi-search-result .rakugaki strong {
+    font-size: 1.4em;
+}
+#yyyi-search-result .rakugaki .event-outer {
+    border: 4px solid #3dbbec; /* 青チョーク */
+    border-radius: 200px 12px 135px 20px / 15px 100px 15px 145px;
+    margin-bottom: 12px;
+    padding: .5em;
+}
+#yyyi-search-result .rakugaki .event-inner {
+    border: 4px solid #f5ea85; /* 黄チョーク */
+    border-radius: 120px 15px 40px 15px / 10px 40px 15px 145px;
+    padding: .5em;
+    position: relative;
+}
+#yyyi-search-result .rakugaki .event-inner::before,
+#yyyi-search-result .rakugaki .event-inner::after
+{
+    content: '';
+    position: absolute;
+    border: solid 4px #d48181; /* 赤チョーク */
+}
+.rakugaki .event-inner::before {
+    width: 1.6em;
+    height: 1.6em;
+    top: -33px;
+    left: -22px;
+    border-radius: 55% 78% 63% 56% / 50% 67% 60% 70%;
+}
+.rakugaki .event-inner::after {
+    width: .5em;
+    height: .5em;
+    top: -24px;
+    left: -14px;
+    border-radius: 60% 54% 45% 78% / 50% 50% 50% 50%;
+}
+.rakugaki .event-inner a { font-weight: bolder; border-bottom: 6px double #d48181; }
+.rakugaki .event-inner a:link { color: #d48181; text-decoration: none; }
+.rakugaki .event-inner a:visited { color: #d48181; text-decoration: none; }
+.rakugaki .event-inner a:hover { color: #d48181; text-decoration: none; }
+.rakugaki .event-inner a:active { color: #d48181; text-decoration: none; }
+/* リンクは青チョーク */
+.rakugaki .link {
+    padding: 0 6px;
+}
+.rakugaki .link a:link { color: #3dbbec; text-decoration: none; }
+.rakugaki .link a:visited { color: #3dbbec; text-decoration: none; }
+.rakugaki .link a:hover { color: #3dbbec; text-decoration: underline; }
+.rakugaki .link a:active { color: #3dbbec; text-decoration: none; }
+.rakugaki ul li { list-style-type: none!important; }
+#yyyi-search-result .footer {
+    margin-top: 16px;
+    border-bottom: solid 5px #bba802;
+}
+/**
+ * 検索結果（カード版）
+ */
+.list-card {
+    display: table;
+    width: 100%;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    box-shadow: #000 1px 1px 2px;
+}
+/* 画像、基本情報 */
+.list-card .list-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 96px;
+    padding: 12px 4px;
+    border-radius: 10px 0 0 10px;
+}
+
+.list-card .yusha-title::before {
+    content: "\2740";
+    margin-right: 2px;
+}
+.list-card .yusha-title {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+.list-card .yusha-name {
+    text-align: center;
+}
+.list-card .list-img img {
+    width: 96px;
+    margin: 4px 0;
+}
+/* レアリティ、属性、攻撃タイプ */
+.list-card .yusha-rcr-outer {
+    padding: 2px 1px;
+    border-radius: 14% / 50%;
+}
+.list-card .yusha-rcr-inner {
+    margin: 0 2px;
+    padding: 3px 0;
+    text-align: center;
+    background: #eeeeeedd;
+    border: solid 1px #cfcfcf;
+    border-radius: 12% / 50%;
+}
+/* リーダースキル、必殺技、アビリティ */
+.list-card .list-info {
+    display: table-cell;
+    vertical-align: middle;
+    background: #fad3a5;
+    padding: 0 4px;
+    border-radius: 0 10px 10px 0;
+}
+.list-card .list-info li {
+    margin-top: 4px;
+    border: solid 4px #eebbcc;
+    border-radius: 10px;
+    background: #fbdadb;
+}
+.list-card .list-info li:last-child {
+    margin-bottom: 4px;
+}
+
+.list-card .list-info li p.title {
+    padding: 4px 2px 3px;
+}
+.list-card .list-info li p.title:before {
+    padding: 2px 8px;
+    margin-right: 4px;
+    color: #fffffc;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-shadow: none;
+    /* beforeラベルを縦中央に配置する */
+    display: inline-block;
+    position: relative;
+	top: -2px;
+}
+.list-card .list-info li.leader-skill p.title:before {
+    content: "リーダースキル";
+    border-radius: 7% / 50%;
+    background: #e95295;
+}
+.list-card .list-info li.arts p.title:before {
+    content: "必殺技";
+    border-radius: 15% / 50%;
+    background: #e83929;
+}
+.list-card .list-info li.ability p.title:before {
+    content: "アビリティ";
+    border-radius: 11% / 50%;
+    background: #674196;
+}
+.list-card .list-info li p.desc {
+    padding: 4px;
+    background: #3f3a2b;
+    color: #efcfd3;
+    border-radius: 0 0 7px 7px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+/**
+ * 検索ボックス
+ */
+ #yyyi-search-form {
+     padding: 0 6px;
+ }
+ .search-title-1 {
+    width: 6em;
+    margin-right: 12px;
+    padding-top: 8px;
+    float: left;
+}
+.search-title-2 {
+    width: 6em;
+    margin-right: 12px;
+    padding-top: 8px;
+    float: left;
+}
+.search-current {
+    overflow: hidden;
+    zoom:1;
+    min-height: 32px;
+}
+.search-current img {
+    width: 30px;
+    margin-right: 2px;
+}
+.search-current div {
+    float: left;
+}
+/**
+ * 検索タグ
+ */
+.tag-outer {
+    margin: 3px 2px 3px 0;
+    padding: 2px 1px;
+    background: #eeeeee;
+}
+.outer-3 {
+    width: 4.5em;
+    border-radius: 19% / 50%;
+}
+.outer-4 {
+    width: 5.5em;
+    border-radius: 17% / 50%;
+}
+.outer-5 {
+    width: 6.5em;
+    border-radius: 15% / 50%;
+}
+.outer-6 {
+    width: 7.5em;
+    border-radius: 13% / 50%;
+}
+.outer-7 {
+    width: 8.5em;
+    border-radius: 11% / 50%;
+}
+.outer-8 {
+    width: 9.5em;
+    border-radius: 9% / 50%;
+}
+.outer-9 {
+    width: 10.5em;
+    border-radius: 7% / 50%;
+}
+.outer-10 {
+    width: 11.5em;
+    border-radius: 5% / 50%;
+}
+.tag-inner {
+    margin: 0 2px;
+    padding: 3px 0;
+    text-align: center;
+    background: #eeeeeedd;
+    border: solid 1px #cfcfcf;
+}
+.outer-3 .tag-inner {
+    border-radius: 15% / 50%;
+}
+.outer-4 .tag-inner {
+    border-radius: 14% / 50%;
+}
+.outer-5 .tag-inner {
+    border-radius: 13% / 50%;
+}
+.outer-6 .tag-inner {
+    border-radius: 11% / 50%;
+}
+.outer-7 .tag-inner {
+    border-radius: 9% / 50%;
+}
+.outer-8 .tag-inner {
+    border-radius: 8% / 50%;
+}
+.outer-9 .tag-inner {
+    border-radius: 7% / 50%;
+}
+.outer-10 .tag-inner {
+    border-radius: 6% / 50%;
+}
+/* .tag-item {} */
+
+/* チェックボックスの装飾テスト ここから */
+input[type=checkbox] {
+    display: none;
+}
+/* 未選択状態のラベル */
+div.search-select label {
+    text-align: center;
+    color: #f9d8dc;
+    background: #16160e;
+    border: 2px solid #9494a5;
+}
+/* 選択状態のラベル */
+input[type=checkbox]:checked + label {
+    color: #fdfdfa;
+    text-shadow: /* 文字の縁取り */
+        #000  1px 1px 1px, #000 -1px -1px 1px, /* 右下、左上 */
+        #000 -1px 1px 1px, #000  1px -1px 1px, /* 左下、右上 */
+        #000  0   1px 1px, #000  0   -1px 1px, /* 下、上 */
+        #000 -1px 0   1px, #000  1px  0   1px; /* 左、右 */
+    background: #b8d200;
+}
+/* チェックボックスの装飾テスト ここまで */
+
+/*チェックボックスのlabel要素を横に並べる*/
+div.search-select label {
+    display: block;
+    float: left;
+    padding: 2px 0;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+}
+/* 勇者 */
+div#search-select-name label {
+    width: 7.5em;
+    border-radius: 7% / 50%;
+}
+/* レアリティ */
+div#search-select-rare label {
+    width: 4em;
+    border-radius: 17% / 50%;
+}
+/* 属性 */
+div#search-select-color label {
+    width: 4em;
+    border-radius: 17% / 50%;
+}
+/* 攻撃範囲 */
+div#search-select-range label {
+    width: 4em;
+    border-radius: 17% / 50%;
+}
+/* スキルタイプ */
+div#search-select-skill-type label {
+    width: 10em;
+    border-radius: 7% / 50%;
+}
+/* タイミング */
+div#search-select-skill-trigger label {
+    width: 10em;
+    border-radius: 7% / 50%;
+}
+/* 対象 */
+div#search-select-skill-target label {
+    width: 10em;
+    border-radius: 7% / 50%;
+}
+/* 効果 */
+div#search-select-skill-status label {
+    width: 10em;
+    border-radius: 7% / 50%;
+}
+/**
+ * 検索アコーディオン
+ */
+.accordion {
+    border-bottom: 1px solid #3f312b;
+}
+.accordion .acd-head-label {
+    display: block;
+    margin: 0;
+    padding: 3px 6px;
+    color: #3f312b;
+    border-top: 1px solid #3f312b;
+    background: linear-gradient(#fbdfbd, #fcead0);
+}
+.accordion .acd-head-radio {
+    display: none;
+}
+.accordion .acd-content {
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0s linear;
+}
+.accordion .acd-head-radio:checked + .acd-content {
+    padding: 6px;
+    padding-bottom: 0;
+    max-height: 1000px;
+    transition: max-height 0s linear;
+    border-top: 2px solid #f8c383;
+    background: #fad3a5;
+}
+
+/* タブメニュー　ここから */
+.tab-radio { /* ラジオボタンを非表示にする。 */
+    display: none;
+}
+label.tab-label {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    width: 100%;
+    color: #bdc3c7;
+    cursor: pointer;
+    background-color: #ecf0f1;
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+label.tab-label:hover {
+    color: #f1a2c5;
+}
+#tab-panels {
+    background-color: #fffffc;
+}
+#tab-panels #tab-panel-1,
+#tab-panels #tab-panel-2 {
+    max-height: 0;
+    opacity: 0;
+    /*
+    デフォルトは高さ0で透明にして目に見えなくしておく。
+    そのあと選択された方のパネルだけ高さと透明度を戻して見えるようにする。
+    */
+    box-sizing: border-box;
+    -webkit-transition: opacity 600ms;
+    transition: opacity 600ms;
+    overflow-y: hidden;
+    padding: 0;
+}
+/* 選択した方のパネルを表示する。 */
+#tab-radio-1:checked ~ #tab-panels #tab-panel-1,
+#tab-radio-2:checked ~ #tab-panels #tab-panel-2 {
+    max-height: initial;
+    opacity: 1;
+    padding: 8px 6px 0;
+}
+#tab-radio-1:checked ~ #tab-list #tab-li-1,
+#tab-radio-2:checked ~ #tab-list #tab-li-2 {
+    pointer-events: none;
+    cursor: default;
+    box-shadow: none;
+}
+#tab-radio-1:checked ~ #tab-list #tab-li-1 label.tab-label,
+#tab-radio-2:checked ~ #tab-list #tab-li-2 label.tab-label {
+    background-color: #ffffff;
+    color: #f1a2c5;
+    padding-top: 12px;
+}
+#tab-radio-1:checked ~ #tab-list #tab-li-1 label.tab-label::after,
+#tab-radio-2:checked ~ #tab-list #tab-li-2 label.tab-label::after {
+    height: 6px;
+}
+
+ul#tab-list {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+ul#tab-list li {
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+ul#tab-list li:hover {
+    -webkit-transition: none;
+    transition: none;
+    border-right: none;
+}
+ul#tab-list li label.tab-label {
+    position: relative;
+    padding: 12px 0;
+}
+ul#tab-list li label.tab-label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 100%;
+    background-color: #f1a2c5;
+    height: 0;
+    -webkit-transition-property: height;
+    transition-property: height;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+ul#tab-list li label.tab-label:hover {
+    padding-top: 12px;
+}
+ul#tab-list li label.tab-label:hover::after {
+    height: 6px;
+}
+/* タブメニュー　ここまで */
+/**
+ * 検索する、絞り込みを解除するボタン
+ */
+.search-button {
+    padding: 12px 0;
+    text-align: center;
+}
+.search-button button,
+.search-button input {
+    width: 144px;
+    height: 22px;
+    border-radius: 7% / 50%;
+    box-shadow: #000 1px 1px 2px;
+}
+.search-button span {  /* ボタン間の隙間調整用 */
+    margin: 0 6px;
+}
+button.btn-main {
+    color: #fffffc;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: /* 文字の縁取り */
+        #000  1px 1px 1px, #000 -1px -1px 1px, /* 右下、左上 */
+        #000 -1px 1px 1px, #000  1px -1px 1px, /* 左下、右上 */
+        #000  0   1px 1px, #000  0   -1px 1px, /* 下、上 */
+        #000 -1px 0   1px, #000  1px  0   1px; /* 左、右 */
+    /* border: 2px solid #f7fbf3; */
+    border: none;
+    background: radial-gradient(#f7ff28 10%, #f8fbe0);
+}
+.btn-sub {
+    color: #3f312b;
+    font-size: 1.3rem;
+    /* border: 2px solid #fefdfb; */
+    border: none;
+    background: radial-gradient(#f9e2e7 10%, #fffffc);
+}
+button.btn-main:active,
+.btn-sub:active {  /* クリックしたとき */
+    -ms-transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+    box-shadow: none;
+    box-shadow: #000 1px 1px 1px;
+    outline: none;  /* 押下時の青枠を消す */
+}
+button.btn-main:focus,
+.btn-sub:focus {  /* フォーカスがあたったとき */
+    outline: none;  /* フォーカス時の青枠を消す */
+}
+/* page topボタン */
+#pagetop {
+    position: fixed;
+    bottom: 38px;
+    right: 6px;
+    padding: 16px;
+    font-size: 2rem;
+    color: #fffffc99;
+    border-radius: 50%;
+    background: #f1a2c566;
+}
+.invisible {
+    visibility: hidden;
+}

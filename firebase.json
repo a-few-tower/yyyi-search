@@ -1,0 +1,63 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "index_dev.html",
+      "**/.*",
+      "**/node_modules/**",
+      "public/*.dev",
+      "python/*",
+      "release.txt",
+      "*.code-workspace"
+    ],
+    "headers": [
+      {
+        "source": "public/service-worker.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=0"
+        }]
+      },
+      {
+        "source": "public/js/yyyi/data.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=3600"
+        },
+        {
+          "key": "ETag",
+          "value": "data-2"
+        }]
+      },
+      {
+        "source": "public/js/yyyi/*.js",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=86400"
+        }]
+      },
+      {
+        "source": "public/css/*.css",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=86400"
+        }]
+      },
+      {
+        "source": "public/image/**/*",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=2592000"
+        }]
+      },
+      {
+        "source": "public/favicon.ico",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=2592000"
+        }]
+      }
+    ]
+  }
+}

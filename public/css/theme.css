@@ -1,0 +1,200 @@
+/* カラーパレットメモ */
+#color-palette {
+  /*  1 : 結城 友奈　   */ border-color: #d889b9; background-color: #ffaddc;
+  /*  2 : 東郷 美森　   */ border-color: #6db9c6; background-color: #95b9e6;
+  /*  3 : 犬吠埼 風　   */ border-color: #c9b649; background-color: #fde566;
+  /*  4 : 犬吠埼 樹　   */ border-color: #62a770; background-color: #83d982;
+  /*  5 : 三好 夏凜　   */ border-color: #d96266; background-color: #ff7f84;
+  /*  6 : 乃木 園子(中) */ border-color: #cc93d8; background-color: #f1adff;
+  /*  7 : 鷲尾 須美　   */ border-color: #8b96c6; background-color: #adc0f8;
+  /*  8 : 三ノ輪 銀　   */ border-color: #d9746e; background-color: #ff9d94;
+  /*  9 : 乃木 園子(小) */ border-color: #a275cd; background-color: #bf8cf1;
+  /* 10 : 乃木 若葉　   */ border-color: #81a0c8; background-color: #9cc1f1;
+  /* 11 : 土居 球子　   */ border-color: #e68a5a; background-color: #feb28d;
+  /* 12 : 伊予島 杏　   */ border-color: #998f84; background-color: #d8d0c3;
+  /* 13 : 郡 千景　　   */ border-color: #db6b91; background-color: #fe92b8;
+  /* 14 : 高嶋 友奈　   */ border-color: #d889b9; background-color: #fcaedc;
+  /* 15 : 上里 ひなた   */ border-color: #f3a54b; background-color: #f9cd64;
+  /* 16 : 白鳥 歌野　   */ border-color: #8c974c; background-color: #e4e65c;
+  /* 17 : 藤森 水都　   */ border-color: #7d7f4d; background-color: #9bb459;
+  /* 18 : 秋原 雪花　   */ border-color: #7f4d66; background-color: #677273;
+  /* 19 : 古波蔵 棗　   */ border-color: #aecccc; background-color: #f5ffff;
+}
+
+.list-card .theme-1 {
+  background: linear-gradient(#fffffc, #ffaddc);
+}
+.list-card .theme-1 .yusha-title::before {
+  color: #d889b9;
+}
+.list-card .theme-2 {
+  background: linear-gradient(#fffffc, #95b9e6);
+}
+.list-card .theme-2 .yusha-title::before {
+  color: #6db9c6;
+}
+.list-card .theme-3 {
+  background: linear-gradient(#fffffc, #fde566);
+}
+.list-card .theme-3 .yusha-title::before {
+  color: #c9b649;
+}
+.list-card .theme-4 {
+  background: linear-gradient(#fffffc, #83d982);
+}
+.list-card .theme-4 .yusha-title::before {
+  color: #62a770;
+}
+.list-card .theme-5 {
+  background: linear-gradient(#fffffc, #ff7f84);
+}
+.list-card .theme-5 .yusha-title::before {
+  color: #d96266;
+}
+.list-card .theme-6 {
+  background: linear-gradient(#fffffc, #f1adff);
+}
+.list-card .theme-6 .yusha-title::before {
+  color: #cc93d8;
+}
+.list-card .theme-7 {
+  background: linear-gradient(#fffffc, #adc0f8);
+}
+.list-card .theme-7 .yusha-title::before {
+  color: #8b96c6;
+}
+.list-card .theme-8 {
+  background: linear-gradient(#fffffc, #ff9d94);
+}
+.list-card .theme-8 .yusha-title::before {
+  color: #d9746e;
+}
+.list-card .theme-9 {
+  background: linear-gradient(#fffffc, #bf8cf1);
+}
+.list-card .theme-9 .yusha-title::before {
+  color: #a275cd;
+}
+.list-card .theme-10 {
+  background: linear-gradient(#fffffc, #9cc1f1);
+}
+.list-card .theme-10 .yusha-title::before {
+  color: #81a0c8;
+}
+.list-card .theme-11 {
+  background: linear-gradient(#fffffc, #feb28d);
+}
+.list-card .theme-11 .yusha-title::before {
+  color: #e68a5a;
+}
+.list-card .theme-12 {
+  background: linear-gradient(#fffffc, #d8d0c3);
+}
+.list-card .theme-12 .yusha-title::before {
+  color: #998f84;
+}
+.list-card .theme-13 {
+  background: linear-gradient(#fffffc, #fe92b8);
+}
+.list-card .theme-13 .yusha-title::before {
+  color: #db6b91;
+}
+.list-card .theme-14 {
+  background: linear-gradient(#fffffc, #fcaedc);
+}
+.list-card .theme-14 .yusha-title::before {
+  color: #d889b9;
+}
+.list-card .theme-15 {
+  background: linear-gradient(#fffffc, #f9cd64);
+}
+.list-card .theme-15 .yusha-title::before {
+  color: #f3a54b;
+}
+.list-card .theme-16 {
+  background: linear-gradient(#fffffc, #e4e65c);
+}
+.list-card .theme-16 .yusha-title::before {
+  color: #8c974c;
+}
+.list-card .theme-17 {
+  background: linear-gradient(#fffffc, #9bb459);
+}
+.list-card .theme-17 .yusha-title::before {
+  color: #7d7f4d;
+}
+.list-card .theme-18 {
+  background: linear-gradient(#fffffc, #677273);
+}
+.list-card .theme-18 .yusha-title::before {
+  color: #7f4d66;
+}
+.list-card .theme-19 {
+  background: linear-gradient(#fffffc, #f5ffff);
+}
+.list-card .theme-19 .yusha-title::before {
+  color: #aecccc;
+}
+
+/**
+ * レアリティ装飾
+ */
+.theme-rare-4 { /* SSR装飾 */
+  background: linear-gradient(120deg, red, orange, yellow, green, blue, indigo, violet);
+}
+.theme-rare-3 { /* SR装飾 */
+  background: linear-gradient(120deg, #a15804, #ffd900, #ffff80, #ffd900, #a15804);
+}
+.theme-rare-2 { /* R装飾 */
+  background: linear-gradient(120deg, #0c416d, #70afc9, #c5eef0, #70afc9, #0c416d);
+}
+.theme-rare-1 { /* N装飾 */
+  background: linear-gradient(120deg, #0c416d, #70afc9, #c5eef0, #70afc9, #0c416d);
+}
+.theme-rare-0 { /* 装飾なし */
+  background: #eeeeee;
+}
+
+/**
+ * 属性装飾
+ */
+.theme-color-1, .red {
+  color: #fffffc;
+  text-shadow: /* 文字の縁取り */
+      #ba3131  1px 1px 1px, #ba3131 -1px -1px 1px, /* 右下、左上 */
+      #ba3131 -1px 1px 1px, #ba3131  1px -1px 1px, /* 左下、右上 */
+      #ba3131  0   1px 2px, #ba3131  0   -1px 2px, /* 下、上 */
+      #ba3131 -1px 0   2px, #ba3131  1px  0   2px; /* 左、右 */
+}
+.theme-color-2, .blue {
+  color: #fffffc;
+  text-shadow: /* 文字の縁取り */
+      #3a4b9e  1px 1px 1px, #3a4b9e -1px -1px 1px, /* 右下、左上 */
+      #3a4b9e -1px 1px 1px, #3a4b9e  1px -1px 1px, /* 左下、右上 */
+      #3a4b9e  0   1px 2px, #3a4b9e  0   -1px 2px, /* 下、上 */
+      #3a4b9e -1px 0   2px, #3a4b9e  1px  0   2px; /* 左、右 */
+}
+.theme-color-3, .green {
+  color: #fffffc;
+  text-shadow: /* 文字の縁取り */
+      #528e28  1px 1px 1px, #528e28 -1px -1px 1px, /* 右下、左上 */
+      #528e28 -1px 1px 1px, #528e28  1px -1px 1px, /* 左下、右上 */
+      #528e28  0   1px 2px, #528e28  0   -1px 2px, /* 下、上 */
+      #528e28 -1px 0   2px, #528e28  1px  0   2px; /* 左、右 */
+}
+.theme-color-4, .yellow {
+  color: #fffffc;
+  text-shadow: /* 文字の縁取り */
+      #e1ae20  1px 1px 1px, #e1ae20 -1px -1px 1px, /* 右下、左上 */
+      #e1ae20 -1px 1px 1px, #e1ae20  1px -1px 1px, /* 左下、右上 */
+      #e1ae20  0   1px 2px, #e1ae20  0   -1px 2px, /* 下、上 */
+      #e1ae20 -1px 0   2px, #e1ae20  1px  0   2px; /* 左、右 */
+}
+.theme-color-5, .purple {
+  color: #fffffc;
+  text-shadow: /* 文字の縁取り */
+      #804390  1px 1px 1px, #804390 -1px -1px 1px, /* 右下、左上 */
+      #804390 -1px 1px 1px, #804390  1px -1px 1px, /* 左下、右上 */
+      #804390  0   1px 2px, #804390  0   -1px 2px, /* 下、上 */
+      #804390 -1px 0   2px, #804390  1px  0   2px; /* 左、右 */
+}

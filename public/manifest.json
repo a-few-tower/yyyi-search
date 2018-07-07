@@ -1,0 +1,28 @@
+{
+  "short_name": "yyyiサーチ",
+  "name": "ゆゆゆいサーチ｜ゆゆゆい攻略の力を、明日の勇者へ",
+  "description": "このサイトは『結城友奈は勇者である 花結いのきらめき』（通称『ゆゆゆい』）の非公式攻略サポートサイトです。誰が戦況に有利なスキルを持っているかが瞬時に検索できます。PWA対応済みなので、『ゆゆゆい』と並べてバーテックス討伐のお供に、ぜひご利用ください。",
+  "background_color": "#fffffc", 
+  "theme_color": "#fffffc",
+  "display": "standalone",
+  "start_url": "https://yyyi-search.firebaseapp.com/?utm_source=homescreen",
+  "icons": [
+    {
+      "src": "image/icon/launcher-icon-4x-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "image/icon/launcher-icon-4x-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "jp.co.altplus.yuyuyui"
+    }
+  ]
+}

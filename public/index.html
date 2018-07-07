@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>ゆゆゆいサーチ｜ゆゆゆい攻略の力を、明日の勇者へ</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <meta name="description" content="このサイトは『結城友奈は勇者である 花結いのきらめき』（通称『ゆゆゆい』）の非公式攻略サポートサイトです。誰が戦況に有利なスキルを持っているかが瞬時に検索できます。PWA対応済みなので、『ゆゆゆい』と並べてバーテックス討伐のお供に、ぜひご利用ください。">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#ffaddc">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- OGP -->
+  <meta property="og:url" content="https://yyyi-search.firebaseapp.com/">
+  <meta property="og:title" content="ゆゆゆいサーチ｜ゆゆゆい攻略の力を、明日の勇者へ">
+  <meta property="og:description" content="このサイトは『結城友奈は勇者である 花結いのきらめき』（通称『ゆゆゆい』）の非公式攻略サポートサイトです。誰が戦況に有利なスキルを持っているかが瞬時に検索できます。PWA対応済みなので、『ゆゆゆい』と並べてバーテックス討伐のお供に、ぜひご利用ください。">
+  <meta property="og:image" content="https://yyyi-search.firebaseapp.com/image/icon/app-icon-144x144.png">
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@a_few_tower">
+  <!-- for Android progressive web app -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- for iOS smart app banner -->
+  <meta name="apple-itunes-app" content="app-id=1205424282">
+  <!-- for iOS mobile web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ゆゆゆいサーチ">
+  <link rel="apple-touch-icon" href="image/icon/app-icon-72x72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="image/icon/app-icon-114x114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="image/icon/app-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="image/icon/app-icon-144x144.png" sizes="144x144">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-1242x2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="image/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/yyyi.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <!-- service worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('service-worker.js')
+        .then(function(registration) {
+          registration.update();
+          console.log('[ServiceWorker] Registered');
+        }
+      );
+    }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120458733-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-120458733-1');
+</script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Android4.4以上、iOS9.0以上 -->
+    <!-- 検索セクション -->
+    <section>
+      <form id="yyyi-search-form" role="search">
+
+        <!-- タブメニュー -->
+        <input id="tab-radio-1" class="tab-radio" type="radio" name="tab-radio" checked>
+        <input id="tab-radio-2" class="tab-radio" type="radio" name="tab-radio">
+        <ul id="tab-list">
+          <li id="tab-li-1"><label class="tab-label" for="tab-radio-1">基本検索</label></li>
+          <li id="tab-li-2"><label class="tab-label" for="tab-radio-2">スキル検索</label></li>
+        </ul>
+        <!-- タブパネル -->
+        <div id="tab-panels">
+          <div id="tab-panel-1">
+            <!-- 基本検索セクション -->
+            <section>
+              <div class="accordion">
+
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="base-1" class="acd-head-label">
+                      <p class="search-title-1">キャラクター</p>
+                      <div id="current-name" class="search-current"> <!-- 現在選択中のキャラクター -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">みんな</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="base-1" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-name" class="acd-content-inner search-select">
+                      <!-- キャラクターが追加される -->
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="base-2" class="acd-head-label">
+                      <p class="search-title-1">レアリティ</p>
+                      <div id="current-rare" class="search-current"> <!-- 現在選択中のレアリティ -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">すべて</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="base-2" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-rare" class="acd-content-inner search-select">
+                        <!-- レアリティが追加される -->
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="base-3" class="acd-head-label">
+                      <p class="search-title-1">属性</p>
+                      <div id="current-color" class="search-current"> <!-- 現在選択中の属性 -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">すべて</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="base-3" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-color" class="acd-content-inner search-select">
+                      <!-- 属性が追加される -->
+                    </div>
+                  </div>
+                </div>
+                  
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="base-4" class="acd-head-label">
+                      <p class="search-title-1">距離タイプ</p>
+                      <!-- 現在選択中の距離タイプ -->
+                      <div id="current-range" class="search-current">
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">すべて</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="base-4" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-range" class="acd-content-inner search-select">
+                      <!-- 距離タイプが追加される -->
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- End accordion -->
+            </section> <!-- End 基本検索セクション -->
+          </div> <!-- End tab-panel-1 -->
+
+          <div id="tab-panel-2"><!-- スキル検索セクション -->
+            <section>
+              <div class="accordion">
+                    
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="skill-1" class="acd-head-label">
+                      <p class="search-title-2">スキルタイプ</p>
+                      <div id="current-skill-type" class="search-current"> <!-- 現在選択中のスキルタイプ -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">すべて</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="skill-1" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-skill-type" class="acd-content-inner search-select">
+                      <!-- スキルタイプが追加される -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="skill-2" class="acd-head-label">
+                      <p class="search-title-2">タイミング</p>
+                      <div id="current-skill-trigger" class="search-current"> <!-- 現在選択中のタイミング -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">いつか</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="skill-2" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-skill-trigger" class="acd-content-inner search-select">
+                      <!-- タイミングが追加される -->
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="skill-3" class="acd-head-label">
+                      <p class="search-title-2">対象</p>
+                      <div id="current-skill-target" class="search-current"> <!-- 現在選択中の対象 -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">だれか</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="skill-3" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-skill-target" class="acd-content-inner search-select">
+                      <!-- 対象が追加される -->
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="acd-box">
+                  <div class="acd-head">
+                    <label for="skill-4" class="acd-head-label">
+                      <p class="search-title-2">効果</p>
+                      <div id="current-skill-status" class="search-current"> <!-- 現在選択中の効果 -->
+                        <div class="tag-outer outer-3">
+                          <p class="tag-inner"><span class="tag-item">なにか</span></p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <input id="skill-4" class="acd-head-radio" type="radio" name="accordion">
+                  <div class="acd-content">
+                    <div id="search-select-skill-status" class="acd-content-inner search-select">
+                      <!-- 効果が追加される -->
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- End accordion -->
+            </section><!-- End スキル検索セクション -->
+          </div> <!-- End tab-panel-2 -->
+
+          <div class="search-button">
+            <button type="submit" name="search" value="search" class="btn-main">検索する</button>
+            <span></span>
+            <input type="reset" name="reset" value="絞り込みを解除する" class="btn-sub"/>
+          </div>
+        </div>
+      </form>
+    </section> <!-- End 検索セクション -->
+
+    <section> <!-- 検索結果セクション -->
+      <div id="yyyi-search-result" role="main">
+        <div class="header">
+          <table>
+            <tr><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </table>
+          <p class="title">勇者部</p>
+        </div>
+        <div id="yyyi-search-result-content">
+          <!-- ここに検索結果が追加される -->
+        </div>
+        <div id="notfound" class="found">できる 人 いないね</div>
+
+        <div class="rakugaki">
+          <div class="event-outer">
+            <p class="event-inner">
+              <strong>リリース1周年キャンペーン実施中！
+              <a href="https://yuyuyui.jp/event/anniversary1.html" target="_blank" rel="noreferrer noopener">おめでとう！</a>
+              </strong>
+            </p>
+          </div>
+          <ul class="link">
+            <li>■ 公式サイトは<a href="https://yuyuyui.jp/" target="_blank" rel="noreferrer noopener">ここ</a></li>
+            <li>● Androidアプリは<a href="https://play.google.com/store/apps/details?id=jp.co.altplus.yuyuyui" target="_blank" rel="noreferrer noopener">こっち</a></li>
+            <li>● iOSアプリは<a href="https://itunes.apple.com/JP/app/id1205424282" target="_blank" rel="noreferrer noopener">こっち</a></li>
+            <li>● PCブラウザ版は<a href="https://games.dmm.com/detail/yuyuyui/" target="_blank" rel="noreferrer noopener">こっち</a></li>
+          </ul>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </section> <!-- End 検索結果セクション -->
+
+    <footer>
+      <p id="version"></p>
+      <p id="author">作成者：廿三夜塔（ID：0908679898）</p>
+      <p id="contact">バグ、データ間違いなどの連絡は<a href="#" target="_blank" rel="noreferrer noopener nofollow">Twitter</a>へ。</p>
+    </footer>
+    <p id="pagetop" class="invisible">▲</p>
+  </div> <!-- End wrapper -->
+  
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lokijs/1.5.5/lokijs.min.js"></script>
+  <script src="js/yyyi/core.js"></script>
+  <script src="js/yyyi/data.js"></script>
+  <script src="js/yyyi/master.js"></script>
+  <script src="js/yyyi/ui.js"></script>
+  <script src="js/yyyi/search.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBfxKDBWk89GZ254ReCylVQkA4Ra24nWss",
+      authDomain: "yyyi-search.firebaseapp.com",
+      databaseURL: "https://yyyi-search.firebaseio.com",
+      projectId: "yyyi-search",
+      storageBucket: "yyyi-search.appspot.com",
+      messagingSenderId: "944886278590"
+    };
+    firebase.initializeApp(config);
+    YYYI.firebase = firebase;
+    console.log("########");
+  </script> -->
+  <script>
+    $(function(){
+      YYYI.ui.init();
+      YYYI.search.init();
+    });
+  </script>
+</body>
+</html>
