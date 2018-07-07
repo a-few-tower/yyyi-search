@@ -77,7 +77,7 @@ YYYI.ui = (function(){
    */
   function _initFooter() {
     // バージョン表記
-    $("#version").append("version : " + YYYI.version);
+    $("#version").append("version : " + YYYI.version + "(" + YYYI.dataVersion + ")");
     // Twitterリンク
     var twitterUrl = "https://twitter.com/intent/tweet?hashtags=yyyi_search&related=yyyi_game:%E3%80%8E%E7%B5%90%E5%9F%8E%E5%8F%8B%E5%A5%88%E3%81%AF%E5%8B%87%E8%80%85%E3%81%A7%E3%81%82%E3%82%8B+%E8%8A%B1%E7%B5%90%E3%81%84%E3%81%AE%E3%81%8D%E3%82%89%E3%82%81%E3%81%8D%E3%80%8F%E5%85%AC%E5%BC%8F%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A7%E3%81%99%E3%80%82,anime_yukiyuna:%E3%82%A2%E3%83%8B%E3%83%A1%E3%80%8E%E7%B5%90%E5%9F%8E%E5%8F%8B%E5%A5%88%E3%81%AF%E5%8B%87%E8%80%85%E3%81%A7%E3%81%82%E3%82%8B%E3%80%8F%E5%85%AC%E5%BC%8F%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A7%E3%81%99%E3%80%82&text=[ver."+YYYI.version+"]";
     $("#contact a").attr("href", twitterUrl);

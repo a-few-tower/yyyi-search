@@ -140,16 +140,16 @@
  * レアリティ装飾
  */
 .theme-rare-4 { /* SSR装飾 */
-  background: linear-gradient(120deg, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(120deg, #ffff00, #9ef40a, #0a92ff, #8957f5, #0a92ff, #9ef40a, #ffff00);
 }
 .theme-rare-3 { /* SR装飾 */
-  background: linear-gradient(120deg, #a15804, #ffd900, #ffff80, #ffd900, #a15804);
+  background: linear-gradient(120deg, #b58208, #ffd900, #ffff80, #ffd900, #b58208);
 }
 .theme-rare-2 { /* R装飾 */
   background: linear-gradient(120deg, #0c416d, #70afc9, #c5eef0, #70afc9, #0c416d);
 }
 .theme-rare-1 { /* N装飾 */
-  background: linear-gradient(120deg, #0c416d, #70afc9, #c5eef0, #70afc9, #0c416d);
+  background: linear-gradient(120deg, #663900, #c38600, #ffc566, #c38600, #663900);
 }
 .theme-rare-0 { /* 装飾なし */
   background: #eeeeee;
