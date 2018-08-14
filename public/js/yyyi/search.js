@@ -17,56 +17,6 @@ YYYI.search = (function(){
     skill = db.addCollection('skill');
 
     _initByDataJs();
-
-    // Get a reference to the database service
-    // var fdb = YYYI.firebase.database();
-    // var yushaRef = fdb.ref('yusha');
-    // var skillRef = fdb.ref('skill');
-
-    // yushaRef.on('child_added', function(data) {
-    //   console.log("add yusha [" + data.key + "] " + data.val().b);
-    //   yusha.insert(data.val());
-    // });
-    // yushaRef.on('child_changed', function(data) {
-    //   console.log("change yusha [" + data.key + "] " + data.val().b);
-    //   yusha.findAndUpdate({"b": data.key}, function(doc){
-    //     var newDoc = data.val();
-    //     doc.c = newDoc.c;
-    //     doc.d = newDoc.d;
-    //     doc.e = newDoc.e;
-    //     doc.f = newDoc.f;
-    //     doc.g = newDoc.g;
-    //     doc.h = newDoc.h;
-    //     doc.i = newDoc.i;
-    //     doc.j = newDoc.j;
-    //     doc.k = newDoc.k;
-    //     doc.l = newDoc.l;
-    //     doc.m = newDoc.m;
-    //     return doc;
-    //   })
-    // });
-    // yushaRef.on('child_removed', function(data) {
-    //   console.log("remove yusha [" + data.key + "] " + data.val().b);
-    //   yusha.findAndRemove({"b": data.key});
-    // });
-    // yushaRef.on('child_moved', function(data) {
-    //   console.log("move yusha [" + data.key + "] " + data.val().b);
-    // });
-
-    // skillRef.on('child_added', function(data) {
-    //   console.log("add skill [" + data.key + "] " + data.val().b);
-    //   skill.insert(data.val());
-    // });
-    // skillRef.on('child_changed', function(data) {
-    //   console.log("change skill [" + data.key + "] " + data.val().b);
-    // });
-    // skillRef.on('child_removed', function(data) {
-    //   console.log("remove skill [" + data.key + "] " + data.val().b);
-    //   skill.findAndRemove({"b": data.key});
-    // });
-    // skillRef.on('child_moved', function(data) {
-    //   console.log("move skill [" + data.key + "] " + data.val().b);
-    // });
   }
   /**
    * data.jsからデータをロードして初期化する。

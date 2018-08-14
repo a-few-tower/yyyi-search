@@ -140,7 +140,7 @@
  * レアリティ装飾
  */
 .theme-rare-4 { /* SSR装飾 */
-  background: linear-gradient(120deg, #ffff00, #9ef40a, #0a92ff, #8957f5, #0a92ff, #9ef40a, #ffff00);
+  background: linear-gradient(120deg, #f85c61, #ffd47d, #bff792, #51ee90, #8ce8ff, #ad92ee, #f78fcb);
 }
 .theme-rare-3 { /* SR装飾 */
   background: linear-gradient(120deg, #b58208, #ffd900, #ffff80, #ffd900, #b58208);
