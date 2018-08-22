@@ -123,7 +123,7 @@ YYYI.ui = (function(){
     }
     var $name = $('<p class="yusha-name white-bold"></p>').append(YYYI.master.getName(nm));
     $img.append($name);
-    var src = YYYI.master.getImgSrc(nm, 200);
+    var src = YYYI.image.getImgSrc(nm, 200);
     $img.append($('<image src=""/>').attr('src', src));
     var $rcr = $('<p class="yusha-rcr-inner"></p>');
     $rcr.append($('<span class="yusha-rare"></span>').append(YYYI.master.getRare(ra)));

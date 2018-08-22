@@ -45,24 +45,26 @@
   <link rel="stylesheet" href="css/theme.css">
   <!-- service worker registration -->
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('service-worker.js')
-        .then(function(registration) {
-          registration.update();
-          console.log('[ServiceWorker] Registered');
-        }
-      );
+    if (document.location.hostname != "") {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('service-worker.js')
+          .then(function(registration) {
+            registration.update();
+            console.log('[ServiceWorker] Registered');
+          }
+        );
+      }
     }
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120458733-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-120458733-1');
-</script>
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120458733-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-120458733-1');
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -303,6 +305,7 @@
   <script src="js/yyyi/core.js"></script>
   <script src="js/yyyi/data.js"></script>
   <script src="js/yyyi/master.js"></script>
+  <script src="js/yyyi/image.js"></script>
   <script src="js/yyyi/ui.js"></script>
   <script src="js/yyyi/search.js"></script>
   <script>

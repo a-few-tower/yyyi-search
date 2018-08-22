@@ -9,5 +9,6 @@ var YYYI = YYYI || {
   master: {},  // マスタデータに関するメソッド
   search: {},  // 検索機能に関するメソッド
   ui: {},  // UIに関するメソッド
+  image: {},  // 画像に関するメソッド
   firebase: null  // firebaseインスタンス
 }
