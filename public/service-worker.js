@@ -1,5 +1,5 @@
 /** キャッシュ名 */
-var CACHE_NAME = 'cache-v1.2.1(11))';
+var CACHE_NAME = 'cache-v1.2.2(12))';
 /** キャッシュ対象のリソースリスト */
 var filesToCache = [
   '/',
