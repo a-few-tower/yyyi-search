@@ -2,9 +2,9 @@
  * YYYIモジュール宣言
  */
 var YYYI = YYYI || {
-  version: "1.2.3",
-  dataVersion: "13",
-  lastUpdateAt: "2018/12/17",
+  version: "1.2.4",
+  dataVersion: "14",
+  lastUpdateAt: "2019/2/5",
   data: {},  // データに関するメソッド
   master: {},  // マスタデータに関するメソッド
   search: {},  // 検索機能に関するメソッド
