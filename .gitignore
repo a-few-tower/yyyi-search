@@ -2,3 +2,5 @@
 .firebaserc
 yyyi.code-workspace
 data.js
+*.cache
+node_modules/**

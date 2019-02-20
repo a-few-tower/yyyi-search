@@ -1,15 +1,15 @@
 {
-  "name": "test-project",
-  "version": "1.0.0",
+  "name": "yyyi-search",
+  "version": "1.2.4",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node-sass public/css/style.scss public/css/style.css -w"
+    "watch": "node-sass sass/yyyi.scss public/css/yyyi.css -w"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "a-few-tower",
+  "license": "MIT",
   "dependencies": {
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
