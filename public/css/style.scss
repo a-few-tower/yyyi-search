@@ -1,0 +1,275 @@
+$husen-color: #ebfd9a;
+$color-leader: #e95295;
+$color-arts: #e83929;
+$color-ability: #674196;
+$color-search-hit: #adf57d;
+
+
+.grid {
+    position: relative;
+}
+.grid-item {
+    display: block;
+    // height: 40px;
+    // margin-bottom: 6px;
+    // position: absolute;
+    // width: 274px;
+    width: 100%;
+}
+
+
+.husen {
+    align-items: center;
+    background: #f0f0f0;
+    display: flex;
+    font-size: 90%;
+    height: 38px;
+    justify-content: space-between;
+    min-width: 320px;
+    width: 100%;
+
+    .freespace {
+        background: #ffaddc;
+        height: 100%;
+        width: 24px;
+    }
+    .base-info {
+        align-items: center;
+        display: flex;
+        padding: 0 2px;
+
+        .title::before {
+            content: "\2740";
+            margin-right: 2px;
+        }
+        .title {
+            font-size: 1.2rem;
+            margin-right: 2px;
+            min-width: 80px;
+            text-align: left;
+            word-break: break-all;
+        }
+        .name {
+            display: none;
+        }
+        @media screen and (min-width: 375px) {
+            .name {
+                display: block;
+                line-height: 15px;
+                margin-right: 2px;
+                text-align: center;
+                width: 60px;
+            }
+        }
+        img {
+            margin: 4px 2px 4px 0;
+            width: 30px;
+        }
+        .rcr-outer {
+            border-radius: 14% / 50%;
+            padding: 2px 1px;
+            width: 100px;
+        }
+        .rcr-inner {
+            background: #eeeeee;
+            border: solid 1px #cfcfcf;
+            border-radius: 12% / 50%;
+            margin: 0 2px;
+            padding: 3px 0;
+            text-align: center;
+        }
+    }
+
+    .skill-info {
+        display: flex;
+        font-size: 80%;
+        justify-content: space-around;
+        padding: 0 6px 0 2px;
+        width: 60px;
+        height: 100%;
+        line-height: 38px;
+
+        li {
+            position: relative;
+            .title, .desc {
+                display: none;
+            }
+        }
+        li:before {
+            border-radius: 50%;
+            color: #fffffc;
+            font-weight: bold;
+            margin: 0 2px;
+        }
+        li.leader:before {
+            background-color: $color-leader;
+            border: solid 3px $color-leader;
+            content: 'リ';
+        }
+        li.arts:before {
+            background-color: $color-arts;
+            border: solid 3px $color-arts;
+            content: '必';
+        }
+        li.ability:before {
+            background-color: $color-ability;
+            border: solid 3px $color-ability;
+            content: 'ア';
+        }
+        li.search-hit:after {
+            background-color: $color-search-hit;
+            border-radius: 50%;
+            content: '';
+            height: 8px;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            width: 8px;
+        }
+    }
+
+    .only-husen {
+        display: block;
+    }
+    .only-card {
+        display: none;
+    }
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: #000 1px 1px 2px;
+    display: table;
+    margin-bottom: 6px;
+    width: 100%;
+
+    .base-info {
+        border-radius: 10px 0 0 10px;
+        display: table-cell;
+        padding: 12px 4px;
+        vertical-align: middle;
+        width: 100px;
+        
+        .title::before {
+            content: "\2740";
+            margin-right: 2px;
+        }
+        .title {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        .name {
+            text-align: center;
+            .only-card {
+                display: inline;
+            }
+        }
+        img {
+            margin: 4px 0;
+            width: 100px;
+        }
+        .rcr-outer {
+            border-radius: 14% / 50%;
+            padding: 2px 1px;
+        }
+        .rcr-inner {
+            background: #eeeeee;
+            border: solid 1px #cfcfcf;
+            border-radius: 12% / 50%;
+            margin: 0 2px;
+            padding: 3px 0;
+            text-align: center;
+        }
+    }
+
+    .skill-info {
+        background: #fad3a5;
+        border-radius: 0 10px 10px 0;
+        display: table-cell;
+        padding: 0 4px;
+        vertical-align: middle;
+
+        li {
+            background: #fbdadb;
+            border: solid 4px #eebbcc;
+            border-radius: 10px;
+            margin-top: 4px;
+
+            p.title:before {
+                color: #fffffc;
+                font-size: 1.0rem;
+                font-weight: bold;
+                margin-right: 4px;
+                padding: 2px 8px;
+                text-shadow: none;
+                /* beforeラベルを縦中央に配置する */
+                display: inline-block;
+                position: relative;
+                top: -2px;
+            }
+            p.title {
+                padding: 4px 2px 3px;
+            }
+            p.desc {
+                background: #3f3a2b;
+                border-radius: 0 0 7px 7px;
+                color: #efcfd3;
+                font-size: 1.2rem;
+                line-height: 1.4;
+                padding: 4px;
+            }
+        }
+        li:last-child {
+            margin-bottom: 4px;
+        }
+        li.leader p.title:before {
+            background: $color-leader;
+            border-radius: 7% / 50%;
+            content: "リーダースキル";
+        }
+        li.arts p.title:before {
+            background: $color-arts;
+            border-radius: 15% / 50%;
+            content: "必殺技";
+        }
+        li.ability p.title:before {
+            background: $color-ability;
+            border-radius: 11% / 50%;
+            content: "アビリティ";
+        }
+    }
+    .only-husen {
+        display: none;
+    }
+    .only-card {
+        display: block;
+    }
+}
+.card.theme-1 {
+    background: linear-gradient(#fffffc, #ffaddc);
+  }
+.theme-1 .title::before {
+    color: #d889b9;
+}
+
+
+
+$husenorg-color: #7cbeff;
+.husenorg {
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+    background: linear-gradient(90deg, $husenorg-color 0%, $husenorg-color 10%, #f0f0f0 10%, #f0f0f0 100%) ; /* 付箋の色 */
+}
+.husenorg:after {
+	box-shadow: 0 5px 5px #999; /* ぼかし */
+    content: "";
+	height: 35px;
+	position: absolute;
+	left: 2px;
+    top: 0;
+    transform: rotate(-3deg); /* 回転 */
+    width: 170px;
+    z-index: -1;
+}

@@ -1,0 +1,189 @@
+$bg-white: #fffffc;
+// 1 : 結城 友奈
+$bd-color-1: #d889b9;
+$bg-color-1: #ffaddc;
+// 2 : 東郷 美森
+$bd-color-2: #6db9c6;
+$bg-color-2: #95b9e6;
+// 3 : 犬吠埼 風
+$bd-color-3: #c9b649;
+$bg-color-3: #fde566;
+// 4 : 犬吠埼 樹
+$bd-color-4: #62a770;
+$bg-color-4: #83d982;
+// 5 : 三好 夏凜
+$bd-color-5: #d96266;
+$bg-color-5: #ff7f84;
+// 6 : 乃木 園子(中)
+$bd-color-6: #cc93d8;
+$bg-color-6: #f1adff;
+// 7 : 鷲尾 須美
+$bd-color-7: #8b96c6;
+$bg-color-7: #adc0f8;
+// 8 : 三ノ輪 銀
+$bd-color-8: #d9746e;
+$bg-color-8: #ff9d94;
+// 9 : 乃木 園子(小)
+$bd-color-9: #a275cd;
+$bg-color-9: #bf8cf1;
+// 10 : 乃木 若葉
+$bd-color-10: #81a0c8;
+$bg-color-10: #9cc1f1;
+// 11 : 土居 球子
+$bd-color-11: #e68a5a;
+$bg-color-11: #feb28d;
+// 12 : 伊予島 杏
+$bd-color-12: #998f84;
+$bg-color-12: #d8d0c3;
+// 13 : 郡 千景
+$bd-color-13: #db6b91;
+$bg-color-13: #fe92b8;
+// 14 : 高嶋 友奈
+$bd-color-14: #d889b9;
+$bg-color-14: #fcaedc;
+// 15 : 上里 ひなた
+$bd-color-15: #f3a54b;
+$bg-color-15: #f9cd64;
+// 16 : 白鳥 歌野
+$bd-color-16: #8c974c;
+$bg-color-16: #e4e65c;
+// 17 : 藤森 水都
+$bd-color-17: #7d7f4d;
+$bg-color-17: #9bb459;
+// 18 : 秋原 雪花
+$bd-color-18: #7f4d66;
+$bg-color-18: #677273;
+// 19 : 古波蔵 棗
+$bd-color-19: #aecccc;
+$bg-color-19: #f5ffff;
+// 20 : 楠 芽吹
+$bd-color-20: #70b56e;
+$bg-color-20: #6dce6a;
+// 21 : 加賀城 雀
+$bd-color-21: #cecc51;
+$bg-color-21: #e9e773;
+// 22 : 弥勒 夕海子
+$bd-color-22: #b15dcd;
+$bg-color-22: #db93f3;
+// 23 : 山伏 しずく
+$bd-color-23: #73b6b5;
+$bg-color-23: #a5dad9;
+// 24 : 国土 亜耶
+$bd-color-24: #c39c4f;
+$bg-color-24: #edcb88;
+
+$BACKGROUND: 1;
+$BORDER: 2;
+$theme-colors: (
+     1: (#d889b9 ,#ffaddc), // 1 : 結城 友奈
+     2: (#6db9c6 ,#95b9e6), // 2 : 東郷 美森
+     3: (#c9b649 ,#fde566), // 3 : 犬吠埼 風
+     4: (#62a770 ,#83d982), // 4 : 犬吠埼 樹
+     5: (#d96266 ,#ff7f84), // 5 : 三好 夏凜
+     6: (#cc93d8 ,#f1adff), // 6 : 乃木 園子(中)
+     7: (#8b96c6 ,#adc0f8), // 7 : 鷲尾 須美
+     8: (#d9746e ,#ff9d94), // 8 : 三ノ輪 銀
+     9: (#a275cd ,#bf8cf1), // 9 : 乃木 園子(小)
+    10: (#81a0c8 ,#9cc1f1), // 10 : 乃木 若葉
+    11: (#e68a5a ,#feb28d), // 11 : 土居 球子
+    12: (#998f84 ,#d8d0c3), // 12 : 伊予島 杏
+    13: (#db6b91 ,#fe92b8), // 13 : 郡 千景
+    14: (#d889b9 ,#fcaedc), // 14 : 高嶋 友奈
+    15: (#f3a54b ,#f9cd64), // 15 : 上里 ひなた
+    16: (#8c974c ,#e4e65c), // 16 : 白鳥 歌野
+    17: (#7d7f4d ,#9bb459), // 17 : 藤森 水都
+    18: (#7f4d66 ,#677273), // 18 : 秋原 雪花
+    19: (#aecccc ,#f5ffff), // 19 : 古波蔵 棗
+    20: (#70b56e ,#6dce6a), // 20 : 楠 芽吹
+    21: (#cecc51 ,#e9e773), // 21 : 加賀城 雀
+    22: (#b15dcd ,#db93f3), // 22 : 弥勒 夕海子
+    23: (#73b6b5 ,#a5dad9), // 23 : 山伏 しずく
+    24: (#c39c4f ,#edcb88)  // 24 : 国土 亜耶
+);
+
+@each $index, $colors in $theme-colors {
+    .card .theme-#{index} {
+        background: linear-gradient($bg-white, nth($colors, $BACKGROUND));
+    
+        .title:before {
+            color: nth($colors, $BORDER);
+        }
+    }
+}
+
+
+
+/**
+ * レアリティ装飾
+ */
+ .theme-rare-4 { /* SSR装飾 */
+    background: linear-gradient(120deg, #f85c61, #ffd47d, #bff792, #51ee90, #8ce8ff, #ad92ee, #f78fcb);
+  }
+  .theme-rare-3 { /* SR装飾 */
+    background: linear-gradient(120deg, #b58208, #ffd900, #ffff80, #ffd900, #b58208);
+  }
+  .theme-rare-2 { /* R装飾 */
+    background: linear-gradient(120deg, #0c416d, #70afc9, #c5eef0, #70afc9, #0c416d);
+  }
+  .theme-rare-1 { /* N装飾 */
+    background: linear-gradient(120deg, #663900, #c38600, #ffc566, #c38600, #663900);
+  }
+  .theme-rare-0 { /* 装飾なし */
+    background: #eeeeee;
+  }
+  
+  $color-red: #ba3131;
+  $color-blue: #3a4b9e;
+  $color-green: #528e28;
+  $color-yellow: #e1ae20;
+  $color-purple: #804390;
+  $colors: (
+      1: $color-red,
+      2: $color-blue,
+      3: $color-green,
+      4: $color-yellow,
+      5: $color-purple,
+  );
+  /**
+   * 属性装飾
+   */
+  .theme-color-1, .red {
+    color: #fffffc;
+    text-shadow: /* 文字の縁取り */
+        #ba3131  1px 1px 1px, #ba3131 -1px -1px 1px, /* 右下、左上 */
+        #ba3131 -1px 1px 1px, #ba3131  1px -1px 1px, /* 左下、右上 */
+        #ba3131  0   1px 2px, #ba3131  0   -1px 2px, /* 下、上 */
+        #ba3131 -1px 0   2px, #ba3131  1px  0   2px; /* 左、右 */
+  }
+  .theme-color-2, .blue {
+    color: #fffffc;
+    text-shadow: /* 文字の縁取り */
+        #3a4b9e  1px 1px 1px, #3a4b9e -1px -1px 1px, /* 右下、左上 */
+        #3a4b9e -1px 1px 1px, #3a4b9e  1px -1px 1px, /* 左下、右上 */
+        #3a4b9e  0   1px 2px, #3a4b9e  0   -1px 2px, /* 下、上 */
+        #3a4b9e -1px 0   2px, #3a4b9e  1px  0   2px; /* 左、右 */
+  }
+  .theme-color-3, .green {
+    color: #fffffc;
+    text-shadow: /* 文字の縁取り */
+        #528e28  1px 1px 1px, #528e28 -1px -1px 1px, /* 右下、左上 */
+        #528e28 -1px 1px 1px, #528e28  1px -1px 1px, /* 左下、右上 */
+        #528e28  0   1px 2px, #528e28  0   -1px 2px, /* 下、上 */
+        #528e28 -1px 0   2px, #528e28  1px  0   2px; /* 左、右 */
+  }
+  .theme-color-4, .yellow {
+    color: #fffffc;
+    text-shadow: /* 文字の縁取り */
+        #e1ae20  1px 1px 1px, #e1ae20 -1px -1px 1px, /* 右下、左上 */
+        #e1ae20 -1px 1px 1px, #e1ae20  1px -1px 1px, /* 左下、右上 */
+        #e1ae20  0   1px 2px, #e1ae20  0   -1px 2px, /* 下、上 */
+        #e1ae20 -1px 0   2px, #e1ae20  1px  0   2px; /* 左、右 */
+  }
+  .theme-color-5, .purple {
+    color: #fffffc;
+    text-shadow: /* 文字の縁取り */
+        #804390  1px 1px 1px, #804390 -1px -1px 1px, /* 右下、左上 */
+        #804390 -1px 1px 1px, #804390  1px -1px 1px, /* 左下、右上 */
+        #804390  0   1px 2px, #804390  0   -1px 2px, /* 下、上 */
+        #804390 -1px 0   2px, #804390  1px  0   2px; /* 左、右 */
+  }
