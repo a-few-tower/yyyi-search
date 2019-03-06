@@ -9,7 +9,10 @@
       "public/*.dev",
       "python/*",
       "release.txt",
-      "*.code-workspace"
+      "*.code-workspace",
+      "LICENSE",
+      "README.md",
+      "sass/*"
     ],
     "headers": [
       {
@@ -27,7 +30,7 @@
         },
         {
           "key": "ETag",
-          "value": "data-14"
+          "value": "data-15"
         }]
       },
       {
