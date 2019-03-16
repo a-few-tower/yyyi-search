@@ -12,7 +12,8 @@
       "*.code-workspace",
       "LICENSE",
       "README.md",
-      "sass/*"
+      "sass/*",
+      ".circleci/*"
     ],
     "headers": [
       {
