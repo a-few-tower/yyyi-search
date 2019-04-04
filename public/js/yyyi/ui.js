@@ -46,7 +46,7 @@ YYYI.ui = (function(){
     _initSearchBox("name", YYYI.master.getSelection("name"));  // キャラクター
     _initSearchBox("rare", YYYI.master.getSelection("rare"));  // レアリティ
     _initSearchBox("color", YYYI.master.getSelection("color"));  // 属性
-    _initSearchBox("range", YYYI.master.getSelection("range"));  // 距離タイプ
+    _initSearchBox("range", YYYI.master.getSelection("range"));  // タイプ
     _initSearchBox("skill-type", YYYI.master.getSelection("skill-type"));  // スキルタイプ
     _initSearchBox("skill-trigger", YYYI.master.getSelection("skill-trigger"));  // タイミング
     _initSearchBox("skill-target", YYYI.master.getSelection("skill-target"));  // 対象
