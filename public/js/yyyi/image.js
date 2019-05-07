@@ -32,11 +32,12 @@ YYYI.image = (function(){
   /**
    * キャラクター画像のパスを返す。
    * @param {String} キャラクターID
+   * @param {String} 原作ID
    * @param {Number} 画像サイズ
    * @return キャラクター画像パス
    */
-  getImgSrc = function(name, size) {
-    return "image/jpg"+size+"/" + ("00" + name).slice(-2) + ".jpg";
+  getImgSrc = function(name, origin, size) {
+    return "image/jpg" + size + "/" + ("00" + origin).slice(-2) + "/" + ("00" + name).slice(-2) + ".jpg";
   }
 
   /**

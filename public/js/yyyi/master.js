@@ -159,7 +159,20 @@ YYYI.master = (function(){
   }
   _s_skill_status = [1,51,2,52,3,53,4,54,5,55,6,56,7,57,8,58,9,59,10,60,
                     11,61,12,62,63,64,65,66,0];
-
+  _origin = {  // 原作
+    0: "すべて",
+    1: "ゆゆゆい",
+    2: "リリフラ",
+  }
+  _name_02 = {  // リリフレコラボキャラ
+    1: "源 モモ",
+    2: "半蔵門 雪",
+    3: "相模 楓",
+    4: "八千代 命",
+    5: "石川 五恵",
+    6: "青葉 初芽",
+  }
+  
   _getValue = function(_master, index) { return _master[index]; }
   getName = function(index) { return _getValue(_name, index); }
   getRare = function(index) { return _getValue(_rare, index); }
