@@ -13,12 +13,13 @@ YYYI.search = (function(){
       rare: 'e',
       color: 'f',
       range: 'g',
-      leader_skill: 'h',
-      leader_skill_desc: 'i',
-      arts: 'j',
-      arts_desc: 'k',
-      ability: 'l',
-      ability_desc: 'm',
+      origin: 'h',
+      leader_skill: 'i',
+      leader_skill_desc: 'j',
+      arts: 'k',
+      arts_desc: 'l',
+      ability: 'm',
+      ability_desc: 'n',
     }
   };
   var skill = {
@@ -26,7 +27,7 @@ YYYI.search = (function(){
     fields: {
       id: 'a',
       code: 'b',
-      skill_type: 'c',
+      type: 'c',
       when: 'd',
       how_long: 'e',
       whom: 'f',
@@ -100,7 +101,7 @@ YYYI.search = (function(){
 
     var skillType = params["skillType"];
     if (skillType.length > 0 && skillType[0] != "0") {
-      conditions.push({[skill.fields.skill_type]: {'$in': _toNumArr(skillType)}});
+      conditions.push({[skill.fields.type]: {'$in': _toNumArr(skillType)}});
     }
     var skillTrigger = params["skillTrigger"];
     if (skillTrigger.length > 0 && skillTrigger[0] != "0") {
@@ -134,7 +135,25 @@ YYYI.search = (function(){
     }
     var name = params["name"];
     if (name.length > 0 && name[0] != "0") {
-      conditions.push({[yusha.fields.name]: {'$in': _toNumArr(name)}});
+      var nameConditions = [];
+      // コラボキャラ
+      var collaboIndex = name.indexOf("99");
+      if (collaboIndex >= 0) {
+        nameConditions.push({[yusha.fields.origin]: {'$ne': 1}});
+        name.splice(collaboIndex, 1);
+      }
+      if (name.length > 0) {
+        nameConditions.push({'$and': [
+          {[yusha.fields.origin]: {'$eq': 1}},
+          {[yusha.fields.name]: {'$in': _toNumArr(name)}}
+        ]});
+      }
+
+      if (nameConditions.length > 1) {
+        conditions.push({'$or': nameConditions});
+      } else {
+        conditions.push(nameConditions[0]);
+      }
     }
     var rare = params["rare"];
     if (rare.length > 0 && rare[0] != "0") {
@@ -148,11 +167,13 @@ YYYI.search = (function(){
     if (range.length > 0 && range[0] != "0") {
       conditions.push({[yusha.fields.range]: {'$in': _toNumArr(range)}});
     }
+    
     return yusha.collection.chain()
       .find({'$and': conditions})
       .compoundsort([
         [yusha.fields.rare, true],  // レアリティ降順
         [yusha.fields.color, false],  // 属性昇順
+        [yusha.fields.origin, false],  // 原作昇順
         [yusha.fields.name, false],  // キャラクター昇順
         [yusha.fields.code, false]])  // コード昇順
       .data();
