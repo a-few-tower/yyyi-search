@@ -24,153 +24,195 @@
   /* 22 : 弥勒 夕海子   */ border-color: #b15dcd; background-color: #db93f3;
   /* 23 : 山伏 しずく   */ border-color: #73b6b5; background-color: #a5dad9;
   /* 24 : 国土 亜耶　   */ border-color: #c39c4f; background-color: #edcb88;
+
+  /*  1 : 源 モモ　  　 */ border-color: #ffb6c4; background-color: #ffc7d2;
+  /*  2 : 半蔵門 雪　   */ border-color: #a3e1ff; background-color: #b8e8ff;
+  /*  3 : 相模 楓　　   */ border-color: #d1aede; background-color: #dcc1e6;
+  /*  4 : 八千代 命　   */ border-color: #ffbd97; background-color: #ffccaf;
+  /*  5 : 石川 五恵　   */ border-color: #98ade2; background-color: #b0c0e9;
+  /*  6 : 青葉 初芽　   */ border-color: #fcde8e; background-color: #fde6a8;
 }
 
-.list-card .theme-1 {
+.list-card .theme-0101 {
   background: linear-gradient(#fffffc, #ffaddc);
 }
-.list-card .theme-1 .yusha-title::before {
+.list-card .theme-0101 .yusha-title::before {
   color: #d889b9;
 }
-.list-card .theme-2 {
+.list-card .theme-0102 {
   background: linear-gradient(#fffffc, #95b9e6);
 }
-.list-card .theme-2 .yusha-title::before {
+.list-card .theme-0102 .yusha-title::before {
   color: #6db9c6;
 }
-.list-card .theme-3 {
+.list-card .theme-0103 {
   background: linear-gradient(#fffffc, #fde566);
 }
-.list-card .theme-3 .yusha-title::before {
+.list-card .theme-0103 .yusha-title::before {
   color: #c9b649;
 }
-.list-card .theme-4 {
+.list-card .theme-0104 {
   background: linear-gradient(#fffffc, #83d982);
 }
-.list-card .theme-4 .yusha-title::before {
+.list-card .theme-0104 .yusha-title::before {
   color: #62a770;
 }
-.list-card .theme-5 {
+.list-card .theme-0105 {
   background: linear-gradient(#fffffc, #ff7f84);
 }
-.list-card .theme-5 .yusha-title::before {
+.list-card .theme-0105 .yusha-title::before {
   color: #d96266;
 }
-.list-card .theme-6 {
+.list-card .theme-0106 {
   background: linear-gradient(#fffffc, #f1adff);
 }
-.list-card .theme-6 .yusha-title::before {
+.list-card .theme-0106 .yusha-title::before {
   color: #cc93d8;
 }
-.list-card .theme-7 {
+.list-card .theme-0107 {
   background: linear-gradient(#fffffc, #adc0f8);
 }
-.list-card .theme-7 .yusha-title::before {
+.list-card .theme-0107 .yusha-title::before {
   color: #8b96c6;
 }
-.list-card .theme-8 {
+.list-card .theme-0108 {
   background: linear-gradient(#fffffc, #ff9d94);
 }
-.list-card .theme-8 .yusha-title::before {
+.list-card .theme-0108 .yusha-title::before {
   color: #d9746e;
 }
-.list-card .theme-9 {
+.list-card .theme-0109 {
   background: linear-gradient(#fffffc, #bf8cf1);
 }
-.list-card .theme-9 .yusha-title::before {
+.list-card .theme-0109 .yusha-title::before {
   color: #a275cd;
 }
-.list-card .theme-10 {
+.list-card .theme-0110 {
   background: linear-gradient(#fffffc, #9cc1f1);
 }
-.list-card .theme-10 .yusha-title::before {
+.list-card .theme-0110 .yusha-title::before {
   color: #81a0c8;
 }
-.list-card .theme-11 {
+.list-card .theme-0111 {
   background: linear-gradient(#fffffc, #feb28d);
 }
-.list-card .theme-11 .yusha-title::before {
+.list-card .theme-0111 .yusha-title::before {
   color: #e68a5a;
 }
-.list-card .theme-12 {
+.list-card .theme-0112 {
   background: linear-gradient(#fffffc, #d8d0c3);
 }
-.list-card .theme-12 .yusha-title::before {
+.list-card .theme-0112 .yusha-title::before {
   color: #998f84;
 }
-.list-card .theme-13 {
+.list-card .theme-0113 {
   background: linear-gradient(#fffffc, #fe92b8);
 }
-.list-card .theme-13 .yusha-title::before {
+.list-card .theme-0113 .yusha-title::before {
   color: #db6b91;
 }
-.list-card .theme-14 {
+.list-card .theme-0114 {
   background: linear-gradient(#fffffc, #fcaedc);
 }
-.list-card .theme-14 .yusha-title::before {
+.list-card .theme-0114 .yusha-title::before {
   color: #d889b9;
 }
-.list-card .theme-15 {
+.list-card .theme-0115 {
   background: linear-gradient(#fffffc, #f9cd64);
 }
-.list-card .theme-15 .yusha-title::before {
+.list-card .theme-0115 .yusha-title::before {
   color: #f3a54b;
 }
-.list-card .theme-16 {
+.list-card .theme-0116 {
   background: linear-gradient(#fffffc, #e4e65c);
 }
-.list-card .theme-16 .yusha-title::before {
+.list-card .theme-0116 .yusha-title::before {
   color: #8c974c;
 }
-.list-card .theme-17 {
+.list-card .theme-0117 {
   background: linear-gradient(#fffffc, #9bb459);
 }
-.list-card .theme-17 .yusha-title::before {
+.list-card .theme-0117 .yusha-title::before {
   color: #7d7f4d;
 }
-.list-card .theme-18 {
+.list-card .theme-0118 {
   background: linear-gradient(#fffffc, #677273);
 }
-.list-card .theme-18 .yusha-title::before {
+.list-card .theme-0118 .yusha-title::before {
   color: #7f4d66;
 }
-.list-card .theme-19 {
+.list-card .theme-0119 {
   background: linear-gradient(#fffffc, #f5ffff);
 }
-.list-card .theme-19 .yusha-title::before {
+.list-card .theme-0119 .yusha-title::before {
   color: #aecccc;
 }
-.list-card .theme-20 {
+.list-card .theme-0120 {
   background: linear-gradient(#fffffc, #6dce6a);
 }
-.list-card .theme-20 .yusha-title::before {
+.list-card .theme-0120 .yusha-title::before {
   color: #70b56e;
 }
-.list-card .theme-21 {
+.list-card .theme-0121 {
   background: linear-gradient(#fffffc, #e9e773);
 }
-.list-card .theme-21 .yusha-title::before {
+.list-card .theme-0121 .yusha-title::before {
   color: #cecc51;
 }
-.list-card .theme-22 {
+.list-card .theme-0122 {
   background: linear-gradient(#fffffc, #db93f3);
 }
-.list-card .theme-22 .yusha-title::before {
+.list-card .theme-0122 .yusha-title::before {
   color: #b15dcd;
 }
-.list-card .theme-23 {
+.list-card .theme-0123 {
   background: linear-gradient(#fffffc, #a5dad9);
 }
-.list-card .theme-23 .yusha-title::before {
+.list-card .theme-0123 .yusha-title::before {
   color: #73b6b5;
 }
-.list-card .theme-24 {
+.list-card .theme-0124 {
   background: linear-gradient(#fffffc, #edcb88);
 }
-.list-card .theme-24 .yusha-title::before {
+.list-card .theme-0124 .yusha-title::before {
   color: #c39c4f;
 }
-
+.list-card .theme-0201 {
+  background: linear-gradient(#fffffc, #ffc7d2);
+}
+.list-card .theme-0201 .yusha-title::before {
+  color: #ffb6c4;
+}
+.list-card .theme-0202 {
+  background: linear-gradient(#fffffc, #b8e8ff);
+}
+.list-card .theme-0202 .yusha-title::before {
+  color: #a3e1ff;
+}
+.list-card .theme-0203 {
+  background: linear-gradient(#fffffc, #dcc1e6);
+}
+.list-card .theme-0203 .yusha-title::before {
+  color: #d1aede;
+}
+.list-card .theme-0204 {
+  background: linear-gradient(#fffffc, #ffccaf);
+}
+.list-card .theme-0204 .yusha-title::before {
+  color: #ffbd97;
+}
+.list-card .theme-0205 {
+  background: linear-gradient(#fffffc, #b0c0e9);
+}
+.list-card .theme-0205 .yusha-title::before {
+  color: #98ade2;
+}
+.list-card .theme-0206 {
+  background: linear-gradient(#fffffc, #fde6a8);
+}
+.list-card .theme-0206 .yusha-title::before {
+  color: #fcde8e;
+}
 /**
  * レアリティ装飾
  */

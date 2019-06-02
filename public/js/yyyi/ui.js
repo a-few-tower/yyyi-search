@@ -96,9 +96,9 @@ YYYI.ui = (function(){
       content.append('<div class="info">実質<span class="count">' + result.length + '</span>人！</div>');
       $.each(result, function() {
         var $div = $('<div class="list-card"></div>');
-        var $img = _generateImgElem(this.c, this.d, this.e, this.f, this.g);
+        var $img = _generateImgElem(this.c, this.d, this.e, this.f, this.g, this.h);
         $div.append($img);
-        var $info = _generateInfoElem(this.h, this.i, this.j, this.k, this.l, this.m);
+        var $info = _generateInfoElem(this.i, this.j, this.k, this.l, this.m, this.n);
         $div.append($info);
         content.append($div);
       });
@@ -114,16 +114,17 @@ YYYI.ui = (function(){
    * @param {Number} ra rare
    * @param {Number} cl color
    * @param {Number} rg range
+   * @param {String} or origin
    */
-  _generateImgElem = function(tl, nm, ra, cl, rg){
-    var $img = $('<div class="list-img theme-'+nm+'"></div>');
+  _generateImgElem = function(tl, nm, ra, cl, rg, or){
+    var $img = $('<div class="list-img theme-'+("00" + or).slice(-2)+("00" + nm).slice(-2)+'"></div>');
     if (tl != '') {
       var $title = $('<p class="yusha-title"></p>').append(tl);
       $img.append($title);
     }
-    var $name = $('<p class="yusha-name white-bold"></p>').append(YYYI.master.getName(nm));
+    var $name = $('<p class="yusha-name white-bold"></p>').append(YYYI.master.getName(nm, or));
     $img.append($name);
-    var src = YYYI.image.getImgSrc(nm, 200);
+    var src = YYYI.image.getImgSrc(nm, or, 200);
     $img.append($('<image src=""/>').attr('src', src));
     var $rcr = $('<p class="yusha-rcr-inner"></p>');
     $rcr.append($('<span class="yusha-rare"></span>').append(YYYI.master.getRare(ra)));
